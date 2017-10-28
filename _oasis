@@ -1,0 +1,18 @@
+Name: migrator
+Version: 0.1
+Synopsis: A RDBMS schema migration tool (only PostgreSQL supported)
+Authors: Volodymyr Melnyk
+License: CC0
+Description: It allows generate and execute migration files with SQL or OCaml code.
+Homepage: http://itrampage.com
+OASISFormat: 0.4
+BuildTools: ocamlbuild
+Plugins: META (0.4), DevFiles (0.4)
+
+Executable "migrator"
+  Path: src
+  MainIs: migrator.ml
+  CompiledObject: best
+  BuildDepends:
+    cmdliner,
+    ansiterminal
